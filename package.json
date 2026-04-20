@@ -27,11 +27,12 @@
   },
   "license": "UNLICENSED",
   "devDependencies": {
-    "oxfmt": "^0.45.0",
+    "@types/node": "^25.6.0",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
     "jsdom": "^26.0.0",
+    "oxfmt": "^0.45.0",
     "oxlint": "^1.60.0",
     "typescript": "^5.8.3",
     "vite": "^6.4.2",
