@@ -1,11 +1,11 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './', // relative paths for GitHub Pages deployment
+  base: "/typography-chooser/",
   server: {
-    port: parseInt('4143', 10) || 5173,
+    port: parseInt("4143", 10) || 5173,
   },
 });
