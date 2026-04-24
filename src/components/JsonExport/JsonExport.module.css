@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.75rem 1.5rem;
+}
+
+.copyBtn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.copyBtn:hover {
+  background: var(--border);
+}
