@@ -7,17 +7,19 @@ interface JsonExportProps {
 }
 
 export function JsonExport({ combination }: JsonExportProps) {
+  const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
+  const jsonText = JSON.stringify(combination, null, 2);
+
   async function handleCopy() {
-    const text = JSON.stringify(combination, null, 2);
     try {
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        await navigator.clipboard.writeText(text);
+        await navigator.clipboard.writeText(jsonText);
       } else {
         // Legacy fallback for browsers without the Clipboard API
         const el = document.createElement("textarea");
-        el.value = text;
+        el.value = jsonText;
         el.style.position = "fixed";
         el.style.opacity = "0";
         document.body.appendChild(el);
@@ -33,11 +35,49 @@ export function JsonExport({ combination }: JsonExportProps) {
     }
   }
 
+  function handleClose() {
+    setOpen(false);
+    setCopied(false);
+  }
+
   return (
-    <div className={styles.container}>
-      <button className={styles.copyBtn} onClick={handleCopy}>
-        {copied ? "Copied!" : "Copy JSON"}
+    <>
+      <button className={styles.showBtn} onClick={() => setOpen(true)}>
+        Show Font Details
       </button>
-    </div>
+
+      {open && (
+        <div className={styles.backdrop} onClick={handleClose}>
+          <div
+            className={styles.modal}
+            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Font Details"
+          >
+            <div className={styles.modalHeader}>
+              <span className={styles.modalTitle}>Font Details</span>
+              <button
+                className={styles.closeBtn}
+                onClick={handleClose}
+                aria-label="Close"
+              >
+                ✕
+              </button>
+            </div>
+            <textarea
+              className={styles.jsonArea}
+              readOnly
+              value={jsonText}
+            />
+            <div className={styles.modalFooter}>
+              <button className={styles.copyBtn} onClick={handleCopy}>
+                {copied ? "Copied!" : "Copy to Clipboard"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
