@@ -1,13 +1,13 @@
-import { useState } from "react";
 import { ThemeProvider } from "./hooks/useTheme";
 import { AppHeader } from "./components/AppHeader/AppHeader";
 import { FilterPanel } from "./components/FilterPanel/FilterPanel";
 import { CombinationGrid } from "./components/CombinationGrid/CombinationGrid";
 import { DemoView } from "./components/DemoView/DemoView";
 import { useFilters } from "./hooks/useFilters";
+import { useHashPage } from "./hooks/useHashPage";
 import { combinations } from "./data/combinations";
 
-function GalleryView({ onDemoClick }: { onDemoClick: (id: string) => void }) {
+function GalleryView() {
   const {
     filters,
     filtered,
@@ -28,13 +28,13 @@ function GalleryView({ onDemoClick }: { onDemoClick: (id: string) => void }) {
         onSearchChange={setSearchQuery}
         searchQuery={filters.searchQuery}
       />
-      <CombinationGrid combinations={filtered} onDemoClick={onDemoClick} />
+      <CombinationGrid combinations={filtered} />
     </>
   );
 }
 
 export default function App() {
-  const [activeDemoId, setActiveDemoId] = useState<string | null>(null);
+  const activeDemoId = useHashPage();
 
   const activeCombination = activeDemoId
     ? (combinations.find((c) => c.id === activeDemoId) ?? null)
@@ -44,9 +44,14 @@ export default function App() {
     <ThemeProvider>
       <AppHeader />
       {activeCombination ? (
-        <DemoView combination={activeCombination} onBack={() => setActiveDemoId(null)} />
+        <DemoView
+          combination={activeCombination}
+          onBack={() => {
+            window.location.hash = "";
+          }}
+        />
       ) : (
-        <GalleryView onDemoClick={setActiveDemoId} />
+        <GalleryView />
       )}
     </ThemeProvider>
   );

@@ -4,10 +4,9 @@ import styles from "./CombinationTile.module.css";
 
 interface CombinationTileProps {
   combination: ShowcaseCombination;
-  onDemoClick: (id: string) => void;
 }
 
-export function CombinationTile({ combination, onDemoClick }: CombinationTileProps) {
+export function CombinationTile({ combination }: CombinationTileProps) {
   const { id, name, category, theme, mood, responsive, fonts, colors } = combination;
 
   const themeLabel =
@@ -73,9 +72,9 @@ export function CombinationTile({ combination, onDemoClick }: CombinationTilePro
         {responsive && <span className={styles.responsiveBadge}>Responsive</span>}
       </div>
 
-      <button className={styles.demoBtn} onClick={() => onDemoClick(id)}>
+      <a href={`#page=${encodeURIComponent(id)}`} className={styles.demoBtn}>
         Demo
-      </button>
+      </a>
     </article>
   );
 }

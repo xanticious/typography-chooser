@@ -127,6 +127,8 @@
   font-weight: 600;
   transition: opacity 0.15s;
   align-self: flex-start;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .demoBtn:hover {

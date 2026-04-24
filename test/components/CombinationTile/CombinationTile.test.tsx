@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect } from "vitest";
 import { CombinationTile } from "../../../src/components/CombinationTile/CombinationTile";
 import type { ShowcaseCombination } from "../../../src/data/types";
 
@@ -22,7 +22,6 @@ describe("CombinationTile", () => {
       colors: { background: "#000", text: "#fff", accent: "#f00" },
       navbar: "top",
     };
-    const onDemoClick = vi.fn();
-    expect(() => CombinationTile({ combination: combo, onDemoClick })).not.toThrow();
+    expect(() => CombinationTile({ combination: combo })).not.toThrow();
   });
 });
