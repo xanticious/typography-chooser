@@ -14,67 +14,79 @@ export function CombinationTile({ combination }: CombinationTileProps) {
 
   return (
     <article className={styles.tile}>
-      <div className={styles.topRow}>
-        <span className={styles.categoryBadge}>{category}</span>
-        <span className={`${styles.themeBadge} ${styles[`theme_${theme.replace("-", "_")}`]}`}>
-          {themeLabel}
-        </span>
+      <div className={styles.screenshotWrapper}>
+        <img
+          src={`screenshots/${id}.jpg`}
+          alt={`${name} demo preview`}
+          className={styles.screenshot}
+          loading="lazy"
+          width={600}
+          height={338}
+        />
       </div>
-
-      <h2 className={styles.tileName} style={{ fontFamily: `"${fonts.heading.name}", serif` }}>
-        {name}
-      </h2>
-
-      <div className={styles.fontsSection}>
-        <div className={styles.fontRow}>
-          <span className={styles.fontLabel}>Heading</span>
-          <span
-            className={styles.fontName}
-            style={{ fontFamily: `"${fonts.heading.name}", serif` }}
-          >
-            {fonts.heading.name}
+      <div className={styles.tileBody}>
+        <div className={styles.topRow}>
+          <span className={styles.categoryBadge}>{category}</span>
+          <span className={`${styles.themeBadge} ${styles[`theme_${theme.replace("-", "_")}`]}`}>
+            {themeLabel}
           </span>
         </div>
-        <div className={styles.fontRow}>
-          <span className={styles.fontLabel}>Body</span>
-          <span
-            className={styles.fontName}
-            style={{ fontFamily: `"${fonts.body.name}", sans-serif` }}
-          >
-            {fonts.body.name}
-          </span>
-        </div>
-        {fonts.mono && (
+
+        <h2 className={styles.tileName} style={{ fontFamily: `"${fonts.heading.name}", serif` }}>
+          {name}
+        </h2>
+
+        <div className={styles.fontsSection}>
           <div className={styles.fontRow}>
-            <span className={styles.fontLabel}>Mono</span>
+            <span className={styles.fontLabel}>Heading</span>
             <span
               className={styles.fontName}
-              style={{ fontFamily: `"${fonts.mono.name}", monospace` }}
+              style={{ fontFamily: `"${fonts.heading.name}", serif` }}
             >
-              {fonts.mono.name}
+              {fonts.heading.name}
             </span>
           </div>
-        )}
-      </div>
+          <div className={styles.fontRow}>
+            <span className={styles.fontLabel}>Body</span>
+            <span
+              className={styles.fontName}
+              style={{ fontFamily: `"${fonts.body.name}", sans-serif` }}
+            >
+              {fonts.body.name}
+            </span>
+          </div>
+          {fonts.mono && (
+            <div className={styles.fontRow}>
+              <span className={styles.fontLabel}>Mono</span>
+              <span
+                className={styles.fontName}
+                style={{ fontFamily: `"${fonts.mono.name}", monospace` }}
+              >
+                {fonts.mono.name}
+              </span>
+            </div>
+          )}
+        </div>
 
-      <div className={styles.colorsRow}>
-        <ColorSplotch color={colors.background} label={`Background: ${colors.background}`} />
-        <ColorSplotch color={colors.text} label={`Text: ${colors.text}`} />
-        <ColorSplotch color={colors.accent} label={`Accent: ${colors.accent}`} />
-      </div>
+        <div className={styles.colorsRow}>
+          <ColorSplotch color={colors.background} label={`Background: ${colors.background}`} />
+          <ColorSplotch color={colors.text} label={`Text: ${colors.text}`} />
+          <ColorSplotch color={colors.accent} label={`Accent: ${colors.accent}`} />
+        </div>
 
-      <div className={styles.moodRow}>
-        {mood.map((m) => (
-          <span key={m} className={styles.moodChip}>
-            {m}
-          </span>
-        ))}
-        {responsive && <span className={styles.responsiveBadge}>Responsive</span>}
-      </div>
+        <div className={styles.moodRow}>
+          {mood.map((m) => (
+            <span key={m} className={styles.moodChip}>
+              {m}
+            </span>
+          ))}
+          {responsive && <span className={styles.responsiveBadge}>Responsive</span>}
+        </div>
 
-      <a href={`#page=${encodeURIComponent(id)}`} className={styles.demoBtn}>
-        Demo
-      </a>
+        <a href={`#page=${encodeURIComponent(id)}`} className={styles.demoBtn}>
+          Demo
+        </a>
+      </div>
     </article>
   );
 }
