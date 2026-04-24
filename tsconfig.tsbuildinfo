@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/counter.tsx","./src/components/fontexamples.tsx","./src/components/pixiexample.tsx","./src/machines/countermachine.ts","./test/filecheck.test.ts"],"version":"5.9.3"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/data/combinations.ts","./src/data/types.ts","./test/filecheck.test.ts","./test/data/combinations.test.ts"],"version":"5.9.3"}

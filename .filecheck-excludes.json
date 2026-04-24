@@ -2,8 +2,5 @@
   "src/vite-env.d.ts",
   "src/main.tsx",
   "src/App.tsx",
-  "src/components/Counter.tsx",
-  "src/components/FontExamples.tsx",
-  "src/components/PixiExample.tsx",
-  "src/machines/counterMachine.ts"
+  "src/data/types.ts"
 ]

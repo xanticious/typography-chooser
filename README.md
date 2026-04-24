@@ -1,17 +1,18 @@
-# **PROJECT_NAME**
+# Typography Showcase
 
-A modern Single Page Application built with:
+A curated typography showcase for web developers and UI/UX designers. Browse 18 expertly researched font combination presets — each representing a real-world application category — rendered in realistic UI context so you can find the right typographic stack fast.
+
+**Live demo**: https://xanticious.github.io/typography-chooser/
+
+Built with:
 
 - **TypeScript** — static typing
 - **React 19** — UI framework
 - **Vite** — dev server & bundler
 - **Vitest** — unit testing
-- **XState v5** — state machines
-- **PixiJS v8** — 2D WebGL rendering
 - **CSS Modules** — scoped component styles
 - **OxLint** — fast Rust-based linter
 - **Oxfmt** — code formatter
-- **FontAwesome** — icons
 - **Google Fonts** — typography
 
 ## Getting Started
