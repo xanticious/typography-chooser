@@ -3,8 +3,8 @@ import { combinations } from "../../src/data/combinations";
 import type { ShowcaseCombination } from "../../src/data/types";
 
 describe("combinations data", () => {
-  it("exports exactly 18 combinations", () => {
-    expect(combinations).toHaveLength(18);
+  it("exports exactly 36 combinations", () => {
+    expect(combinations).toHaveLength(36);
   });
 
   it("every combination has a unique id", () => {
