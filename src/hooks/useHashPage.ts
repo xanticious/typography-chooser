@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function getPageFromHash(hash: string): string | null {
+export function getPageFromHash(hash: string): string | null {
   if (hash.startsWith("#page=")) {
     return decodeURIComponent(hash.slice(6)) || null;
   }
