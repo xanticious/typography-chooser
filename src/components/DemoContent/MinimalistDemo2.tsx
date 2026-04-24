@@ -24,7 +24,7 @@ export function MinimalistDemo2() {
           <p className={styles.body}>
             I've been thinking about the gap between starting and shipping. Not the fear of
             failure — most people know about that — but the quieter problem: the project that is
-            95% done and lives in a folder called <em>final-v3</em>.
+            95% done and lives in a folder called <code>final-v3</code>.
           </p>
           <blockquote className={styles.pullQuote}>
             "Done is a choice, not a state."
