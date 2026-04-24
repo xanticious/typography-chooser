@@ -61,7 +61,9 @@
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   line-height: 1;
-  transition: background 0.12s, color 0.12s;
+  transition:
+    background 0.12s,
+    color 0.12s;
 }
 
 .closeBtn:hover {

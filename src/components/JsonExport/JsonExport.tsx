@@ -66,11 +66,7 @@ export function JsonExport({ combination }: JsonExportProps) {
           >
             <div className={styles.modalHeader}>
               <span className={styles.modalTitle}>Font Details</span>
-              <button
-                className={styles.closeBtn}
-                onClick={handleClose}
-                aria-label="Close"
-              >
+              <button className={styles.closeBtn} onClick={handleClose} aria-label="Close">
                 ✕
               </button>
             </div>

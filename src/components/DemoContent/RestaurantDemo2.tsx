@@ -3,7 +3,11 @@ import styles from "./Demo.module.css";
 const specials = [
   { name: "Avocado Toast Stack", desc: "Poached eggs, chili flakes, sourdough", price: "$14" },
   { name: "Matcha Pancakes", desc: "Yuzu cream, toasted sesame brittle", price: "$16" },
-  { name: "The Classic Benny", desc: "House hollandaise, back bacon, English muffin", price: "$17" },
+  {
+    name: "The Classic Benny",
+    desc: "House hollandaise, back bacon, English muffin",
+    price: "$17",
+  },
 ];
 
 export function RestaurantDemo2() {
@@ -25,9 +29,7 @@ export function RestaurantDemo2() {
       </nav>
       <main className={styles.main}>
         <div className={styles.hero}>
-          <h1 className={styles.heroHeading}>
-            Brunch done right. Every day until 3pm.
-          </h1>
+          <h1 className={styles.heroHeading}>Brunch done right. Every day until 3pm.</h1>
           <p className={styles.heroSub}>
             Local ingredients, big flavors, zero fuss. Find us at 42 Market Street.
           </p>

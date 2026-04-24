@@ -70,8 +70,8 @@ def score_response(expected: str, actual: str) -> float:
             </tbody>
           </table>
           <p className={styles.body}>
-            Claude 3.5 led on accuracy while Gemini 1.5 offered the best cost-per-quality ratio.
-            The right choice depends on your latency budget and token volume.
+            Claude 3.5 led on accuracy while Gemini 1.5 offered the best cost-per-quality ratio. The
+            right choice depends on your latency budget and token volume.
           </p>
         </article>
         <aside className={styles.authorBio}>

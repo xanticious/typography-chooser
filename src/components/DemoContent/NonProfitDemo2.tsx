@@ -28,8 +28,8 @@ export function NonProfitDemo2() {
         <div className={styles.hero}>
           <h1 className={styles.heroHeading}>The planet needs roots, not just branches.</h1>
           <p className={styles.heroSub}>
-            Rootwork funds community-led environmental projects that create lasting change from
-            the ground up.
+            Rootwork funds community-led environmental projects that create lasting change from the
+            ground up.
           </p>
         </div>
         <p className={styles.sectionLabel}>Active Campaigns</p>

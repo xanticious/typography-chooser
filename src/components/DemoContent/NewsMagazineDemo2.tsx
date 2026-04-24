@@ -42,9 +42,9 @@ export function NewsMagazineDemo2() {
           </h1>
           <p className={styles.meta}>April 24, 2025 · 3 min read</p>
           <p className={styles.body}>
-            A wave of startups — and every major cloud provider — is racing to deploy AI agents
-            that can read email, write code, and close deals without human sign-off. Here's what
-            could go wrong.
+            A wave of startups — and every major cloud provider — is racing to deploy AI agents that
+            can read email, write code, and close deals without human sign-off. Here's what could go
+            wrong.
           </p>
         </div>
         <p className={styles.sectionLabel}>Latest</p>

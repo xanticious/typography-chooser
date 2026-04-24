@@ -28,8 +28,7 @@ export function DevDocsDemo2() {
         <p className={styles.breadcrumb}>CLI Reference › Commands</p>
         <h1 className={styles.heading}>CLI Commands</h1>
         <p className={styles.body}>
-          All commands accept <code>--help</code> for inline documentation. Global flags
-          (
+          All commands accept <code>--help</code> for inline documentation. Global flags (
           <code>--config</code>, <code>--verbose</code>) can be placed before any subcommand.
         </p>
         {commands.map((c) => (

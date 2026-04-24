@@ -36,8 +36,8 @@ export function AccessibilityDemo2() {
             electricity — a 2-point leap over the previous record set in 2022.
           </p>
           <p className={styles.body}>
-            The breakthrough uses a perovskite-silicon tandem structure and could reduce the cost
-            of utility-scale solar by an estimated 18% within five years.
+            The breakthrough uses a perovskite-silicon tandem structure and could reduce the cost of
+            utility-scale solar by an estimated 18% within five years.
           </p>
           <div className={styles.a11yForm}>
             <label className={styles.formLabel} htmlFor="signal-text-size">

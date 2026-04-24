@@ -30,11 +30,7 @@ export function EducationDemo2() {
         <h1 className={styles.heading}>Spring 2025 — Dashboard</h1>
         <p className={styles.body}>Welcome back, Jordan. You have 2 assignments due this week.</p>
         {courses.map((c) => (
-          <div
-            key={c.code}
-            className={styles.featureCard}
-            style={{ marginBottom: "1rem" }}
-          >
+          <div key={c.code} className={styles.featureCard} style={{ marginBottom: "1rem" }}>
             <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}>
               <span className={styles.subheading}>
                 {c.code} · {c.name}

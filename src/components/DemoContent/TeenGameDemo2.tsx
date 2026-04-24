@@ -29,8 +29,8 @@ export function TeenGameDemo2() {
         <div className={styles.hero}>
           <h1 className={styles.heroHeading}>Some doors were never meant to open.</h1>
           <p className={styles.heroSub}>
-            A hand-drawn indie adventure about memory, grief, and the friendships that survive
-            both. Coming 2025 for PC and Switch.
+            A hand-drawn indie adventure about memory, grief, and the friendships that survive both.
+            Coming 2025 for PC and Switch.
           </p>
           <div className={styles.heroCtas}>
             <button className={styles.ctaBtn}>Wishlist on Steam</button>
