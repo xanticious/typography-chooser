@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { ShowcaseCombination } from "../../data/types";
 import styles from "./JsonExport.module.css";
 
@@ -40,6 +40,15 @@ export function JsonExport({ combination }: JsonExportProps) {
     setCopied(false);
   }
 
+  useEffect(() => {
+    if (!open) return;
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") handleClose();
+    }
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
   return (
     <>
       <button className={styles.showBtn} onClick={() => setOpen(true)}>
@@ -69,6 +78,7 @@ export function JsonExport({ combination }: JsonExportProps) {
               className={styles.jsonArea}
               readOnly
               value={jsonText}
+              aria-label="Font details JSON"
             />
             <div className={styles.modalFooter}>
               <button className={styles.copyBtn} onClick={handleCopy}>
