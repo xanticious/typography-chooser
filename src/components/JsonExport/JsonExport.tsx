@@ -13,12 +13,14 @@ export function JsonExport({ combination }: JsonExportProps) {
       if (navigator.clipboard && navigator.clipboard.writeText) {
         await navigator.clipboard.writeText(text);
       } else {
+        // Legacy fallback for browsers without the Clipboard API
         const el = document.createElement("textarea");
         el.value = text;
         el.style.position = "fixed";
         el.style.opacity = "0";
         document.body.appendChild(el);
         el.select();
+        // eslint-disable-next-line @typescript-eslint/no-deprecated -- intentional legacy fallback
         document.execCommand("copy");
         document.body.removeChild(el);
       }
