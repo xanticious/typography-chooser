@@ -10,9 +10,15 @@ export function EducationDemo() {
       <nav className={styles.nav}>
         <span className={styles.navBrand}>Scholarly</span>
         <div className={styles.navLinks}>
-          <a className={styles.navLink} href="#">Courses</a>
-          <a className={styles.navLink} href="#">My Learning</a>
-          <a className={styles.navLink} href="#">Community</a>
+          <a className={styles.navLink} href="#">
+            Courses
+          </a>
+          <a className={styles.navLink} href="#">
+            My Learning
+          </a>
+          <a className={styles.navLink} href="#">
+            Community
+          </a>
         </div>
       </nav>
       <main className={styles.main}>
@@ -22,7 +28,9 @@ export function EducationDemo() {
             <div key={c.title} className={styles.featureCard}>
               <h3 className={styles.subheading}>{c.title}</h3>
               <p className={styles.body}>Instructor: {c.instructor}</p>
-              <div className={styles.progressBar}><div className={styles.progressFill} style={{ width: `${c.progress}%` }} /></div>
+              <div className={styles.progressBar}>
+                <div className={styles.progressFill} style={{ width: `${c.progress}%` }} />
+              </div>
               <p className={styles.meta}>{c.progress}% complete</p>
             </div>
           ))}

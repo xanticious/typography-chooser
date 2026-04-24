@@ -10,16 +10,25 @@ export function NonProfitDemo() {
       <nav className={styles.nav}>
         <span className={styles.navBrand}>Common Ground</span>
         <div className={styles.navLinks}>
-          <a className={styles.navLink} href="#">Our Work</a>
-          <a className={styles.navLink} href="#">Stories</a>
-          <a className={styles.navLink} href="#">Volunteer</a>
+          <a className={styles.navLink} href="#">
+            Our Work
+          </a>
+          <a className={styles.navLink} href="#">
+            Stories
+          </a>
+          <a className={styles.navLink} href="#">
+            Volunteer
+          </a>
           <button className={styles.ctaBtn}>Donate Now</button>
         </div>
       </nav>
       <main className={styles.main}>
         <div className={styles.hero}>
           <h1 className={styles.heroHeading}>Building a city where no one is left behind.</h1>
-          <p className={styles.heroSub}>Common Ground works at the intersection of housing, food security, and community resilience.</p>
+          <p className={styles.heroSub}>
+            Common Ground works at the intersection of housing, food security, and community
+            resilience.
+          </p>
         </div>
         <div className={styles.statCards}>
           {stats.map((s) => (
@@ -31,7 +40,9 @@ export function NonProfitDemo() {
         </div>
         <div className={styles.donationCta}>
           <h2 className={styles.subheading}>Your gift makes a difference.</h2>
-          <p className={styles.body}>Every dollar goes directly to programs serving our neighbors in need.</p>
+          <p className={styles.body}>
+            Every dollar goes directly to programs serving our neighbors in need.
+          </p>
           <button className={styles.ctaBtn}>Make a Donation</button>
         </div>
       </main>

@@ -1,8 +1,16 @@
 import styles from "./Demo.module.css";
 const menuItems = [
-  { name: "Seared Duck Breast", desc: "Cherry gastrique, wilted greens, roasted fingerlings", price: "$34" },
+  {
+    name: "Seared Duck Breast",
+    desc: "Cherry gastrique, wilted greens, roasted fingerlings",
+    price: "$34",
+  },
   { name: "Lobster Bisque", desc: "Tarragon cream, brioche croutons, chive oil", price: "$18" },
-  { name: "Truffle Risotto", desc: "Arborio rice, black truffle, aged Parmesan, truffle oil", price: "$28" },
+  {
+    name: "Truffle Risotto",
+    desc: "Arborio rice, black truffle, aged Parmesan, truffle oil",
+    price: "$28",
+  },
 ];
 export function RestaurantDemo() {
   return (
@@ -10,10 +18,18 @@ export function RestaurantDemo() {
       <nav className={styles.nav}>
         <span className={styles.navBrand}>Ember & Oak</span>
         <div className={styles.navLinks}>
-          <a className={styles.navLink} href="#">Menu</a>
-          <a className={styles.navLink} href="#">Wine List</a>
-          <a className={styles.navLink} href="#">Events</a>
-          <a className={styles.navLink} href="#">Reserve</a>
+          <a className={styles.navLink} href="#">
+            Menu
+          </a>
+          <a className={styles.navLink} href="#">
+            Wine List
+          </a>
+          <a className={styles.navLink} href="#">
+            Events
+          </a>
+          <a className={styles.navLink} href="#">
+            Reserve
+          </a>
         </div>
       </nav>
       <main className={styles.main}>

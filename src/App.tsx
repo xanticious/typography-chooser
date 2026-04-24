@@ -8,7 +8,16 @@ import { useFilters } from "./hooks/useFilters";
 import { combinations } from "./data/combinations";
 
 function GalleryView({ onDemoClick }: { onDemoClick: (id: string) => void }) {
-  const { filters, filtered, setCategory, toggleTheme, toggleMood, setResponsiveOnly, setSearchQuery, clearAll } = useFilters();
+  const {
+    filters,
+    filtered,
+    setCategory,
+    toggleTheme,
+    toggleMood,
+    setResponsiveOnly,
+    setSearchQuery,
+    clearAll,
+  } = useFilters();
 
   return (
     <>
@@ -27,7 +36,9 @@ function GalleryView({ onDemoClick }: { onDemoClick: (id: string) => void }) {
 export default function App() {
   const [activeDemoId, setActiveDemoId] = useState<string | null>(null);
 
-  const activeCombination = activeDemoId ? combinations.find((c) => c.id === activeDemoId) ?? null : null;
+  const activeCombination = activeDemoId
+    ? (combinations.find((c) => c.id === activeDemoId) ?? null)
+    : null;
 
   return (
     <ThemeProvider>

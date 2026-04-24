@@ -10,7 +10,10 @@ export interface FilterState {
   searchQuery: string;
 }
 
-export function filterCombinations(all: ShowcaseCombination[], filters: FilterState): ShowcaseCombination[] {
+export function filterCombinations(
+  all: ShowcaseCombination[],
+  filters: FilterState,
+): ShowcaseCombination[] {
   return all.filter((c) => {
     if (filters.category && c.category !== filters.category) return false;
     if (filters.themes.length > 0 && !filters.themes.includes(c.theme)) return false;
@@ -24,14 +27,22 @@ export function filterCombinations(all: ShowcaseCombination[], filters: FilterSt
   });
 }
 
-const initialFilters: FilterState = { category: null, themes: [], moods: [], responsiveOnly: false, searchQuery: "" };
+const initialFilters: FilterState = {
+  category: null,
+  themes: [],
+  moods: [],
+  responsiveOnly: false,
+  searchQuery: "",
+};
 
 export function useFilters() {
   const [filters, setFilters] = useState<FilterState>(initialFilters);
 
   const filtered = useMemo(() => filterCombinations(combinations, filters), [filters]);
 
-  function setCategory(category: AppCategory | null) { setFilters((f) => ({ ...f, category })); }
+  function setCategory(category: AppCategory | null) {
+    setFilters((f) => ({ ...f, category }));
+  }
   function toggleTheme(theme: Theme) {
     setFilters((f) => ({
       ...f,
@@ -44,9 +55,24 @@ export function useFilters() {
       moods: f.moods.includes(mood) ? f.moods.filter((m) => m !== mood) : [...f.moods, mood],
     }));
   }
-  function setResponsiveOnly(responsiveOnly: boolean) { setFilters((f) => ({ ...f, responsiveOnly })); }
-  function setSearchQuery(searchQuery: string) { setFilters((f) => ({ ...f, searchQuery })); }
-  function clearAll() { setFilters(initialFilters); }
+  function setResponsiveOnly(responsiveOnly: boolean) {
+    setFilters((f) => ({ ...f, responsiveOnly }));
+  }
+  function setSearchQuery(searchQuery: string) {
+    setFilters((f) => ({ ...f, searchQuery }));
+  }
+  function clearAll() {
+    setFilters(initialFilters);
+  }
 
-  return { filters, filtered, setCategory, toggleTheme, toggleMood, setResponsiveOnly, setSearchQuery, clearAll };
+  return {
+    filters,
+    filtered,
+    setCategory,
+    toggleTheme,
+    toggleMood,
+    setResponsiveOnly,
+    setSearchQuery,
+    clearAll,
+  };
 }

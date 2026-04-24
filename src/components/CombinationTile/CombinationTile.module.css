@@ -39,9 +39,19 @@
   margin-left: auto;
 }
 
-.theme_dark { background: #1e2030; color: #a0a0c0; }
-.theme_light { background: #e8e8f0; color: #5a5a7a; }
-.theme_high_contrast { background: #000; color: #ff0; border: 1px solid #ff0; }
+.theme_dark {
+  background: #1e2030;
+  color: #a0a0c0;
+}
+.theme_light {
+  background: #e8e8f0;
+  color: #5a5a7a;
+}
+.theme_high_contrast {
+  background: #000;
+  color: #ff0;
+  border: 1px solid #ff0;
+}
 
 .tileName {
   font-size: 1.4rem;

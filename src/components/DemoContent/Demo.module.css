@@ -274,7 +274,10 @@
   opacity: 0.8;
 }
 
-.sidebarItem:hover { opacity: 1; background: color-mix(in srgb, var(--demo-text) 8%, transparent); }
+.sidebarItem:hover {
+  opacity: 1;
+  background: color-mix(in srgb, var(--demo-text) 8%, transparent);
+}
 
 .dashboardContent {
   flex: 1;
@@ -415,7 +418,9 @@
   opacity: 0.6;
 }
 
-.leadStory { margin-bottom: 2rem; }
+.leadStory {
+  margin-bottom: 2rem;
+}
 
 .sectionLabel {
   font-size: 0.7rem;
@@ -433,10 +438,18 @@
   padding-top: 1.5rem;
 }
 
-.secondaryStory { display: flex; flex-direction: column; gap: 0.4rem; }
+.secondaryStory {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
 
 /* Kids / game */
-.mascot { font-size: 4rem; text-align: center; margin-bottom: 1rem; }
+.mascot {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
 .gameGrid {
   display: grid;
@@ -456,7 +469,9 @@
   gap: 0.5rem;
 }
 
-.gameThumb { font-size: 2.5rem; }
+.gameThumb {
+  font-size: 2.5rem;
+}
 
 /* Teen game */
 .charCards {
@@ -482,7 +497,9 @@
   opacity: 0.8;
 }
 
-.leaderboard { margin-top: 1.5rem; }
+.leaderboard {
+  margin-top: 1.5rem;
+}
 
 .leaderList {
   margin: 0.5rem 0;
@@ -494,7 +511,12 @@
 }
 
 /* Restaurant */
-.menuSection { margin: 1.5rem 0; display: flex; flex-direction: column; gap: 1.25rem; }
+.menuSection {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
 
 .menuItem {
   border-bottom: 1px solid color-mix(in srgb, var(--demo-text) 10%, transparent);
@@ -645,7 +667,9 @@
   border-radius: 0.25rem;
 }
 
-.streamInfo { padding: 0.75rem; }
+.streamInfo {
+  padding: 0.75rem;
+}
 
 .chatSnippet {
   margin-top: 1.5rem;

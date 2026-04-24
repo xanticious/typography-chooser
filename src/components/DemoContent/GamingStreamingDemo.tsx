@@ -11,9 +11,15 @@ export function GamingStreamingDemo() {
       <nav className={styles.nav}>
         <span className={styles.navBrand}>NEON//STREAM</span>
         <div className={styles.navLinks}>
-          <a className={styles.navLink} href="#">Browse</a>
-          <a className={styles.navLink} href="#">Following</a>
-          <a className={styles.navLink} href="#">Clips</a>
+          <a className={styles.navLink} href="#">
+            Browse
+          </a>
+          <a className={styles.navLink} href="#">
+            Following
+          </a>
+          <a className={styles.navLink} href="#">
+            Clips
+          </a>
           <button className={styles.ctaBtn}>Go Live</button>
         </div>
       </nav>
@@ -27,16 +33,24 @@ export function GamingStreamingDemo() {
               </div>
               <div className={styles.streamInfo}>
                 <p className={styles.subheading}>{s.title}</p>
-                <p className={styles.body}>{s.streamer} · {s.viewers} viewers</p>
+                <p className={styles.body}>
+                  {s.streamer} · {s.viewers} viewers
+                </p>
               </div>
             </div>
           ))}
         </div>
         <div className={styles.chatSnippet}>
           <h3 className={styles.subheading}>Chat</h3>
-          <p className={styles.body}><strong>wraith99:</strong> ggs let's run it back</p>
-          <p className={styles.body}><strong>pxlkira:</strong> no way that was top 1 play</p>
-          <p className={styles.body}><strong>nxtvex:</strong> LET'S GOOO 🔥</p>
+          <p className={styles.body}>
+            <strong>wraith99:</strong> ggs let's run it back
+          </p>
+          <p className={styles.body}>
+            <strong>pxlkira:</strong> no way that was top 1 play
+          </p>
+          <p className={styles.body}>
+            <strong>nxtvex:</strong> LET'S GOOO 🔥
+          </p>
         </div>
       </main>
     </div>

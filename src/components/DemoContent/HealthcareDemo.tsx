@@ -1,9 +1,18 @@
 import styles from "./Demo.module.css";
 export function HealthcareDemo() {
   const services = [
-    { title: "Primary Care", desc: "Routine checkups, preventive screenings, and chronic care management." },
-    { title: "Urgent Care", desc: "Walk-in appointments available 7 days a week, no referral needed." },
-    { title: "Telehealth", desc: "Video consultations with board-certified physicians within minutes." },
+    {
+      title: "Primary Care",
+      desc: "Routine checkups, preventive screenings, and chronic care management.",
+    },
+    {
+      title: "Urgent Care",
+      desc: "Walk-in appointments available 7 days a week, no referral needed.",
+    },
+    {
+      title: "Telehealth",
+      desc: "Video consultations with board-certified physicians within minutes.",
+    },
   ];
   const doctors = [
     { name: "Dr. Sarah Chen", spec: "Family Medicine" },
@@ -15,9 +24,15 @@ export function HealthcareDemo() {
       <nav className={styles.nav}>
         <span className={styles.navBrand}>Meridian Health</span>
         <div className={styles.navLinks}>
-          <a className={styles.navLink} href="#">Services</a>
-          <a className={styles.navLink} href="#">Doctors</a>
-          <a className={styles.navLink} href="#">Patient Portal</a>
+          <a className={styles.navLink} href="#">
+            Services
+          </a>
+          <a className={styles.navLink} href="#">
+            Doctors
+          </a>
+          <a className={styles.navLink} href="#">
+            Patient Portal
+          </a>
           <button className={styles.ctaBtn}>Book Appointment</button>
         </div>
       </nav>

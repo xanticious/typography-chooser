@@ -2,7 +2,9 @@ import { useState } from "react";
 import type { ShowcaseCombination } from "../../data/types";
 import styles from "./JsonExport.module.css";
 
-interface JsonExportProps { combination: ShowcaseCombination; }
+interface JsonExportProps {
+  combination: ShowcaseCombination;
+}
 
 export function JsonExport({ combination }: JsonExportProps) {
   const [copied, setCopied] = useState(false);

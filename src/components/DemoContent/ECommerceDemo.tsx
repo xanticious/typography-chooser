@@ -10,10 +10,18 @@ export function ECommerceDemo() {
       <nav className={styles.nav}>
         <span className={styles.navBrand}>Arkana Goods</span>
         <div className={styles.navLinks}>
-          <a className={styles.navLink} href="#">Women</a>
-          <a className={styles.navLink} href="#">Men</a>
-          <a className={styles.navLink} href="#">Sale</a>
-          <a className={styles.navLink} href="#">Cart (2)</a>
+          <a className={styles.navLink} href="#">
+            Women
+          </a>
+          <a className={styles.navLink} href="#">
+            Men
+          </a>
+          <a className={styles.navLink} href="#">
+            Sale
+          </a>
+          <a className={styles.navLink} href="#">
+            Cart (2)
+          </a>
         </div>
       </nav>
       <main className={styles.main}>

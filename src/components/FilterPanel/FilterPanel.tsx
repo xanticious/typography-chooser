@@ -3,26 +3,54 @@ import type { FilterState } from "../../hooks/useFilters";
 import styles from "./FilterPanel.module.css";
 
 const CATEGORIES: AppCategory[] = [
-  "Technical Blog","Lifestyle / Personal Blog","E-Commerce / Retail","Enterprise CRUD / Dashboard",
-  "SaaS / Product Landing Page","Portfolio / Creative Agency","News / Magazine","Kid-Friendly Game / App",
-  "Teen / Young Adult Game","Documentation / Developer Docs","Healthcare / Medical","Restaurant / Food & Drink",
-  "Non-Profit / Charity","Finance / Banking","Education / EdTech","Accessibility / High-Contrast",
-  "Minimalist Personal Site","Gaming / Streaming",
+  "Technical Blog",
+  "Lifestyle / Personal Blog",
+  "E-Commerce / Retail",
+  "Enterprise CRUD / Dashboard",
+  "SaaS / Product Landing Page",
+  "Portfolio / Creative Agency",
+  "News / Magazine",
+  "Kid-Friendly Game / App",
+  "Teen / Young Adult Game",
+  "Documentation / Developer Docs",
+  "Healthcare / Medical",
+  "Restaurant / Food & Drink",
+  "Non-Profit / Charity",
+  "Finance / Banking",
+  "Education / EdTech",
+  "Accessibility / High-Contrast",
+  "Minimalist Personal Site",
+  "Gaming / Streaming",
 ];
 
 const THEMES: Theme[] = ["light", "dark", "high-contrast"];
-const MOODS: Mood[] = ["clean","playful","serious","elegant","bold","warm","minimal"];
+const MOODS: Mood[] = ["clean", "playful", "serious", "elegant", "bold", "warm", "minimal"];
 
 interface FilterPanelProps {
   filterState: FilterState;
-  onFilterChange: { setCategory: (c: AppCategory | null) => void; toggleTheme: (t: Theme) => void; toggleMood: (m: Mood) => void; setResponsiveOnly: (v: boolean) => void; };
+  onFilterChange: {
+    setCategory: (c: AppCategory | null) => void;
+    toggleTheme: (t: Theme) => void;
+    toggleMood: (m: Mood) => void;
+    setResponsiveOnly: (v: boolean) => void;
+  };
   onClearAll: () => void;
   onSearchChange: (q: string) => void;
   searchQuery: string;
 }
 
-export function FilterPanel({ filterState, onFilterChange, onClearAll, onSearchChange, searchQuery }: FilterPanelProps) {
-  const hasActiveFilters = filterState.category !== null || filterState.themes.length > 0 || filterState.moods.length > 0 || filterState.responsiveOnly;
+export function FilterPanel({
+  filterState,
+  onFilterChange,
+  onClearAll,
+  onSearchChange,
+  searchQuery,
+}: FilterPanelProps) {
+  const hasActiveFilters =
+    filterState.category !== null ||
+    filterState.themes.length > 0 ||
+    filterState.moods.length > 0 ||
+    filterState.responsiveOnly;
 
   return (
     <aside className={styles.panel}>
@@ -46,7 +74,9 @@ export function FilterPanel({ filterState, onFilterChange, onClearAll, onSearchC
         >
           <option value="">All categories</option>
           {CATEGORIES.map((c) => (
-            <option key={c} value={c}>{c}</option>
+            <option key={c} value={c}>
+              {c}
+            </option>
           ))}
         </select>
       </div>

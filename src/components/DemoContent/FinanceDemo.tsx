@@ -36,10 +36,20 @@ export function FinanceDemo() {
         </div>
         <h2 className={styles.subheading}>Recent Transactions</h2>
         <table className={styles.table}>
-          <thead><tr><th>Description</th><th>Date</th><th>Amount</th></tr></thead>
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Date</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
           <tbody>
             {transactions.map((t) => (
-              <tr key={t.desc + t.date}><td>{t.desc}</td><td>{t.date}</td><td>{t.amount}</td></tr>
+              <tr key={t.desc + t.date}>
+                <td>{t.desc}</td>
+                <td>{t.date}</td>
+                <td>{t.amount}</td>
+              </tr>
             ))}
           </tbody>
         </table>

@@ -1,6 +1,9 @@
 import styles from "./ColorSplotch.module.css";
 
-interface ColorSplotchProps { color: string; label?: string; }
+interface ColorSplotchProps {
+  color: string;
+  label?: string;
+}
 
 export function ColorSplotch({ color, label }: ColorSplotchProps) {
   return (

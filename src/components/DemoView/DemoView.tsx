@@ -43,7 +43,10 @@ const DEMO_MAP: Record<AppCategory, DemoComponentFn> = {
   "Gaming / Streaming": GamingStreamingDemo,
 };
 
-interface DemoViewProps { combination: ShowcaseCombination; onBack: () => void; }
+interface DemoViewProps {
+  combination: ShowcaseCombination;
+  onBack: () => void;
+}
 
 export function DemoView({ combination, onBack }: DemoViewProps) {
   const DemoComponent = DEMO_MAP[combination.category];
@@ -51,7 +54,9 @@ export function DemoView({ combination, onBack }: DemoViewProps) {
   const cssVars = {
     "--demo-font-heading": `"${combination.fonts.heading.name}", serif`,
     "--demo-font-body": `"${combination.fonts.body.name}", sans-serif`,
-    "--demo-font-mono": combination.fonts.mono ? `"${combination.fonts.mono.name}", monospace` : "monospace",
+    "--demo-font-mono": combination.fonts.mono
+      ? `"${combination.fonts.mono.name}", monospace`
+      : "monospace",
     "--demo-bg": combination.colors.background,
     "--demo-text": combination.colors.text,
     "--demo-accent": combination.colors.accent,
@@ -60,7 +65,9 @@ export function DemoView({ combination, onBack }: DemoViewProps) {
   return (
     <div className={styles.overlay}>
       <div className={styles.toolbar}>
-        <button className={styles.backBtn} onClick={onBack}>← Back to Gallery</button>
+        <button className={styles.backBtn} onClick={onBack}>
+          ← Back to Gallery
+        </button>
         <span className={styles.demoTitle}>{combination.name}</span>
         <JsonExport combination={combination} />
       </div>
